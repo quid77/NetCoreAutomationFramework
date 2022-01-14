@@ -11,17 +11,6 @@ namespace NUnitTestProject.Application.Tests.TestBase
     {
         protected IWebDriver driver;
 
-        //set up config file to be readable while using .NET Core Framework 
-        [OneTimeSetUp]
-        public void SetUpConfigFile()
-        {
-            //var asd = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-
-            //var testDllName = Assembly.GetAssembly(GetType()).GetName().Name;
-            //var configName = testDllName + ".dll.config";
-            //AppDomain.CurrentDomain.SetData("APP_CONFIG_FILE", configName);
-        }
-
         [SetUp]
         public void SetUpBeforeTest()
         {
