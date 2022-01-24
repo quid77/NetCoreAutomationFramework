@@ -7,14 +7,15 @@ using System.Reflection;
 
 namespace NUnitTestProject.Application.Tests.TestBase
 {
-    public class BaseTest
+    public abstract class BaseTest
     {
         protected IWebDriver driver;
+        protected ConfigReader config = new ConfigReader();
 
         [SetUp]
         public void SetUpBeforeTest()
         {
-            string basePageUrl = ConfigurationManager.AppSettings["AppBaseUrl"];
+            string basePageUrl = config.GetProperty("AppBaseUrl");
             DriverProvider.CreateDriver();
             driver = DriverProvider.GetDriver();
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
