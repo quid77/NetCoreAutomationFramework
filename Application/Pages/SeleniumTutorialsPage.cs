@@ -1,8 +1,5 @@
 ﻿using NUnitTestProject.Application.Pages.PageBase;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NUnitTestProject.Application.Pages
 {

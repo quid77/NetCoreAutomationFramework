@@ -2,8 +2,6 @@
 using NUnitTestProject.Application.Helpers;
 using OpenQA.Selenium;
 using System;
-using System.Configuration;
-using System.Reflection;
 
 namespace NUnitTestProject.Application.Tests.TestBase
 {

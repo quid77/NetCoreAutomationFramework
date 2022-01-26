@@ -3,7 +3,6 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace NUnitTestProject.Application.Helpers
 {
@@ -25,6 +24,11 @@ namespace NUnitTestProject.Application.Helpers
         }
 
         public void WaitForElementToBeClickable(By locator)
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(locator));
+        }
+
+        public void WaitForElementToBeClickable(IWebElement locator)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(locator));
         }

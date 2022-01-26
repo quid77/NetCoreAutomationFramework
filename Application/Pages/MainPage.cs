@@ -1,8 +1,5 @@
 ﻿using NUnitTestProject.Application.Pages.PageBase;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NUnitTestProject.Application.Pages
 {
@@ -19,7 +16,7 @@ namespace NUnitTestProject.Application.Pages
         //PAGE METHODS
         public SeleniumTutorialsPage GoToSeleniumTutorialsPage()
         {
-            SeleniumTutorialsButton.Click();
+            elementHelper.Click(SeleniumTutorialsButton);
             SeleniumTutorialsPage seleniumTutorialsPage = new SeleniumTutorialsPage(driver);
             seleniumTutorialsPage.VerifyPageLoaded();
 
